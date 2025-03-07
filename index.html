@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container text-center">
+            <a class="navbar-brand" href="#"></a>
+            <img width="250px" src="22.jpg" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-light active" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://t.me/AHRORBEKGROUP">Контакты</a>
+                    </li>
+                </ul>
+                <div class="text-center language-container">
+                    <button class="cart-button1">🛒 Корзина</button>
+                    <i id="languageToggle" style="font-size: 25px; color: white; cursor: pointer;" class="bi bi-globe m-2"></i>
+                    <div id="languageMenu" class="language-menu">
+                        <button class="lang-btn" onclick="changeLanguage('uz')">🇺🇿 Uzbek</button>
+                        <button class="lang-btn" onclick="changeLanguage('ru')">🇷🇺 Russian</button>
+                        <button class="lang-btn" onclick="changeLanguage('en')">🇬🇧 English</button>
+                    </div>
+                </div>
+                <div style="color: #1C786B;" id="resetCounter">
+                    clear
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+
+    <section style="background-color: #036C5E; color: white;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 mt-5">
+                    <h1 class="display-3 font-monospace">10% скидки на все <br> бургеры!</h1><br><br>
+                    <p style="font-size: 20px;" class="mb-5 mt-3">
+                        Общая сумма заказа должна быть больше или равна 70 000 сум. Предложение не распространяется на
+                        доставку. Акция "Товар дня" продлится до 31.12.2022. следите за предложениями!
+                    </p>
+                   
+                    <div class="container mt-4">
+                        <button class="btn btn-warning text-light mt-3 mb-3">В меню</button>
+                        <button id="viewCounter" class="btn btn-success btn-sm">👁️ Ko'rishlar: <span id="viewCount">0</span></button>
+                    </div>
+                    
+                    
+                </div>
+                <div class="col-12 col-sm-6 mt-5">
+                    <img width="100%" class="m-auto mb-3" src="photo_2025-03-06_20-00-49.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container mt-4 mb-3">
+        <div class="btn-group mb-3 d-flex flex-wrap" role="group">
+            <button class="btn btn-primary filter-btn" data-category="all">Все</button>
+            <button class="btn btn-primary filter-btn" data-category="Лаваш">Лаваш</button>
+            <button class="btn btn-primary filter-btn" data-category="Шаурма">Шаурма</button>
+            <button class="btn btn-primary filter-btn" data-category="Бургеры">Бургеры</button>
+            <button class="btn btn-primary filter-btn" data-category="Хот-дог">Хот-дог</button>
+            <button class="btn btn-primary filter-btn" data-category="Пицца">Пицца</button>
+            <button class="btn btn-primary filter-btn" data-category="Напитки">Напитки</button>
+        </div>
+
+        <div class="row mb-3" id="product-list">
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Лаваш">
+                <div style="height: 480px;" class="card">
+                    <img src="images.jpg" class="card-img-top mt-3" alt="Лаваш">
+                    <div class="card-body1">
+                        
+                        <h5 class="card-title">Лаваш</h5>
+                        <p class="card-text">Лавашли штрудел – кўп вақт сарфланилмайдиган, ҳам фойдали, ҳам парҳезбоп
+                            ширинликлардан биридир. Керак бўладиган масаллиқлар ҳам деярли ҳар кимнинг рўзғоридан
+                            топилса керак. </p>
+                            <button class="btn btn-primary mt-5">Харид қилиш  <input type="checkbox" class="product-checkbox1" data-price="37000"></button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Лаваш">
+                <div style="height: 480px;" class="card">
+                    <img src="lavash3.jpg" class="card-img-top mt-3" alt="Лаваш">
+                    <div class="card-body1">
+                        <h5 class="card-title">Лаваш</h5>
+                        <p class="card-text">Лавашли штрудел – кўп вақт сарфланилмайдиган, ҳам фойдали, ҳам парҳезбоп
+                            ширинликлардан биридир. Керак бўладиган масаллиқлар ҳам деярли ҳар кимнинг рўзғоридан
+                            топилса керак.</p>
+                            <button class="btn btn-primary mt-5">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="35000"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Лаваш">
+                <div style="height: 480px;" class="card">
+                    <img src="lavash1.jpg" class="card-img-top mt-3" alt="Лаваш">
+                    <div class="card-body1">
+                        <h5 class="card-title">Лаваш</h5>
+                        <p class="card-text">Агарда таом лавашдан тайёрланиладиган бўлса билингки, уни пишириш узоқ
+                            вақтни талаб қилмайди. Товуқ гўшти солиб пишириладиган мана бундай рулетдан парҳез тутувчи
+                            инсонларга ҳам истеъмол қилиш тавсия қилинади. </p>
+                            <button class="btn btn-primary">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="26000"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Лаваш">
+                <div style="height: 480px;" class="card">
+                    <img src="lavash2.jpg" class="card-img-top mt-3" alt="Лаваш">
+                    <div class="card-body1">
+                        <h5 class="card-title">Лаваш</h5>
+                        <p class="card-text">Агарда таом лавашдан тайёрланиладиган бўлса билингки, уни пишириш узоқ
+                            вақтни талаб қилмайди. Товуқ гўшти солиб пишириладиган мана бундай рулетдан парҳез тутувчи
+                            инсонларга ҳам истеъмол қилиш тавсия қилинади. </p>
+                            <button class="btn btn-primary">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="28000"></button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+            <!--  -->
+
+          <div class="row mb-3">
+             
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Шаурма">
+                <div style="height: 430px;" class="card">
+                    <img src="shourma2.jpg" class="card-img-top mt-3 mb-3" alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Шаурма</h5>
+                        <p class="card-text">Шоурма – машҳур Яқин Шарқ таоми бўлиб, у асосан лаваш ёки пита ичига гўшт
+                            ва сабзавотлар солиб тайёрланади</p>
+                            <button class="btn btn-primary">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="30000"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Шаурма">
+                <div style="height: 430px;" class="card">
+                    <img src="images (1).jpg" class="card-img-top mt-3 mb-3" alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Шаурма</h5>
+                        <p class="card-text">Шоурма – машҳур Яқин Шарқ таоми бўлиб, у асосан лаваш ёки пита ичига гўшт
+                            ва сабзавотлар солиб тайёрланади</p>
+                            <button class="btn btn-primary">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="35000"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Шаурма">
+                <div style="height: 430px;" class="card">
+                    <img src="3.jpg" class="card-img-top mt-3 mb-3" alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Шаурма</h5>
+                        <p class="card-text">Шоурма – машҳур Яқин Шарқ таоми бўлиб, у асосан лаваш ёки пита ичига гўшт
+                            ва сабзавотлар солиб тайёрланади</p>
+                            <button class="btn btn-primary">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="22000"></button>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Шаурма">
+                <div style="height: 430px;" class="card">
+                    <img src="shourma3.jpeg" class="card-img-top mt-3 mb-3" alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Шаурма</h5>
+                        <p class="card-text">Шоурма – машҳур Яқин Шарқ таоми бўлиб, у асосан лаваш ёки пита ичига гўшт
+                            ва сабзавотлар солиб тайёрланади</p>
+                            <button class="btn btn-primary">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="35000"></button>
+                    </div>
+                </div>
+            </div>
+          </div>
+       
+    </div>
+
+    <!--  -->
+
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Бургеры">
+                <div style="height: 450px;" class="card">
+                    <img src="burger.jpg" class="card-img-top mt-3 mb-3" alt="Pitsa">
+                    <div class="card-body1">
+            
+                        <h5 class="card-title">Бургер</h5>
+                        <p class="card-text">Сиз мазали ва ширин ҳид таратган, ичи юмшоқ, усти эса энгил қарсилдоқ
+                            бургерни тасаввур қилдингизми? Бизнинг бургерлар айнан шундай – тўйимли, лаззатли ва
+                            унутилмас таъмга эга!</p>
+                            <button class="btn btn-primary ">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="40000"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Бургеры">
+                <div style="height: 450px;" class="card">
+                    <img src="burger2.jpg" class="card-img-top mt-3 mb-3" alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Бургер</h5>
+                        <p class="card-text">Сиз мазали ва ширин ҳид таратган, ичи юмшоқ, усти эса энгил қарсилдоқ
+                            бургерни тасаввур қилдингизми? Бизнинг бургерлар айнан шундай – тўйимли, лаззатли ва
+                            унутилмас таъмга эга!</p>
+                            <button class="btn btn-primary ">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="30000"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Бургеры">
+                <div style="height: 450px;" class="card">
+                    <img src="burger3.webp" class="card-img-top mt-3 mb-3" alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Бургер</h5>
+                        <p class="card-text">Сиз мазали ва ширин ҳид таратган, ичи юмшоқ, усти эса энгил қарсилдоқ
+                            бургерни тасаввур қилдингизми? Бизнинг бургерлар айнан шундай – тўйимли, лаззатли ва
+                            унутилмас таъмга эга!</p>
+                            <button class="btn btn-primary ">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="35000"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Бургеры">
+                <div style="height: 450px;" class="card">
+                    <img src="burger4.jpg" class="card-img-top mt-3 mb-3" alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Бургер</h5>
+                        <p class="card-text">Сиз мазали ва ширин ҳид таратган, ичи юмшоқ, усти эса энгил қарсилдоқ
+                            бургерни тасаввур қилдингизми? Бизнинг бургерлар айнан шундай – тўйимли, лаззатли ва
+                            унутилмас таъмга эга!</p>
+                            <button class="btn btn-primary ">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="33000"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Хот-дог">
+                <div style="height: 520px;" class="card">
+                    <img src="xot-dog.jpg" class="card-img-top mt-3 mb-3" alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Хот-дог</h5>
+                        <p class="card-text">Иссиқ ва Мазали Ҳот-Доглар – Ҳақиқий Таъмдан Баҳраманд Бўлинг! 🔥
+                            Сиз юмшоқ нон, шарбатга тўла колбаса ва махсус соуслар уйғунлигини тасаввур қилдингизми?
+                            Бизнинг ҳот-догларимиз – бу нафақат тезпишар газак, балки ростдан ҳам унутилмас таъм!</p>
+                            <button class="btn btn-primary">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="16000"> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Хот-дог">
+                <div style="height: 520px;" class="card">
+                    <img src="xot dog.jpg" class="card-img-top mt-3 mb-3 p-2" alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Хот-дог</h5>
+                        <p class="card-text">Иссиқ ва Мазали Ҳот-Доглар – Ҳақиқий Таъмдан Баҳраманд Бўлинг! 🔥
+                            Сиз юмшоқ нон, шарбатга тўла колбаса ва махсус соуслар уйғунлигини тасаввур қилдингизми?
+                            Бизнинг ҳот-догларимиз – бу нафақат тезпишар газак, балки ростдан ҳам унутилмас таъм!</p>
+                            <button class="btn btn-primary">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="12000"> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Хот-дог">
+                <div style="height: 520px;" class="card">
+                    <img src="xot dog-3.jpg" class="card-img-top mt-3 mb-3" alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Хот-дог</h5>
+                        <p class="card-text">Иссиқ ва Мазали Ҳот-Доглар – Ҳақиқий Таъмдан Баҳраманд Бўлинг! 🔥
+                            Сиз юмшоқ нон, шарбатга тўла колбаса ва махсус соуслар уйғунлигини тасаввур қилдингизми?
+                            Бизнинг ҳот-догларимиз – бу нафақат тезпишар газак, балки ростдан ҳам унутилмас таъм!</p>
+                            <button class="btn btn-primary">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="18000"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Хот-дог">
+                <div style="height: 520px;" class="card">
+                    <img src="xot dog 4.jpg" class="card-img-top mt-3 mb-3" alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Хот-дог</h5>
+                        <p class="card-text">Иссиқ ва Мазали Ҳот-Доглар – Ҳақиқий Таъмдан Баҳраманд Бўлинг! 🔥
+                            Сиз юмшоқ нон, шарбатга тўла колбаса ва махсус соуслар уйғунлигини тасаввур қилдингизми?
+                            Бизнинг ҳот-догларимиз – бу нафақат тезпишар газак, балки ростдан ҳам унутилмас таъм!</p>
+                            <button class="btn btn-primary">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="23000"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+
+    <div class="container">
+      <section>
+        <div class="row mb-3">
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center mycol" data-category="Пицца">
+                <div style="height: 530px;" class="card" >
+                    <img src="round-pizza-isolated-on-transparent-background-italian-pizza-with-mushroom-toppings-generative-ai-png.webp" class="card-img-top mt-4 " alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Пицца</h5>
+                        <p class="card-text">Мазали ва Тўйимли Пица – Ҳар Қачон Ажойиб Танлов! 🔥
+                            Сиз иссиққина, қарсилдоқ четлари ва ичи майин, эриган пишлоқ билан тўлдирилган ҳақиқий пица
+                            ҳақида ўйладингизми? 😋 Бизнинг пицаларимиз – бу ҳақиқий лаззат ва завқ манба</p>
+                            <button class="btn btn-primary">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="70000"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center mycol" data-category="Пицца">
+                <div style="height: 530px;" class="card">
+                    <img src="pitsa2.webp" class="card-im-topp mt-4" alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Пицца</h5>
+                        <p class="card-text">Мазали ва Тўйимли Пица – Ҳар Қачон Ажойиб Танлов! 🔥
+                            Сиз иссиққина, қарсилдоқ четлари ва ичи майин, эриган пишлоқ билан тўлдирилган ҳақиқий пица
+                            ҳақида ўйладингизми? 😋 Бизнинг пицаларимиз – бу ҳақиқий лаззат ва завқ манбаи</p>
+                            <button class="btn btn-primary">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="80000"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center mycol" data-category="Пицца">
+                <div style="height: 530px;" class="card">
+                    <img src="pitsa5.jpg" class="card-img-top mt-4" alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Пицца</h5>
+                        <p class="card-text">Мазали ва Тўйимли Пица – Ҳар Қачон Ажойиб Танлов! 🔥
+                            Сиз иссиққина, қарсилдоқ четлари ва ичи майин, эриган пишлоқ билан тўлдирилган ҳақиқий пица
+                            ҳақида ўйладингизми? 😋 Бизнинг пицаларимиз – бу ҳақиқий лаззат ва завқ манбаи!</p>
+                            <br>
+                            <button class="btn btn-primary">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="50000"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center mycol" data-category="Пицца">
+                <div style="height: 530px;" class="card">
+                    <img src="pitsa4.jpg" class="card-img-top mt-4" alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Пицца</h5>
+                        <p class="card-text">Мазали ва Тўйимли Пица – Ҳар Қачон Ажойиб Танлов! 🔥
+                            Сиз иссиққина, қарсилдоқ четлари ва ичи майин, эриган пишлоқ билан тўлдирилган ҳақиқий пица
+                            ҳақида ўйладингизми? 😋 Бизнинг пицаларимиз – бу ҳақиқий лаззат ва завқ манбаи!</p>
+                            <br>    
+                            <button class="btn btn-primary">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="110000"></button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+      </section>
+
+    </div>
+    <!--  -->
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Напитки">
+                <div style="height: 350px;" class="card">
+                    <img src="suv.jpg" class="card-img-top mt-3 mb-3" alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Напитки</h5>
+                        <p class="card-text">Табиий ва соф – кристаллдек тиниқ, организм учун фойдали!</p>
+                        <button class="btn btn-primary ">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="10000"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Напитки">
+                <div style="height: 350px;" class="card">
+                    <img src="suv2.jpg" class="card-img-top mt-3 mb-3" alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Оддий Сув</h5>
+                        <p class="card-text">Юқори сифатли фильтрланган – саломатлик учун 100% хавфсиз!</p>
+                        <button class="btn btn-primary ">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="6000"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Напитки">
+                <div style="height: 350px;" class="card">
+                    <img src="energetik.jpg" class="card-img-top mt-3 mb-3" alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Энергетик</h5>
+                        <p class="card-text">Тетиклик ва энергия – ҳар лаҳза янгиланиш ҳисси!</p>
+                        <button class="btn btn-primary ">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="15000"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3 mb-2 product-card1 text-center" data-category="Напитки">
+                <div style="height: 350px;" class="card">
+                    <img src="coffe.jpg" class="card-img-top mt-3 mb-3" alt="Pitsa">
+                    <div class="card-body1">
+                        <h5 class="card-title">Cоффее</h5>
+                        <p class="card-text">3овуқда жонлантирувчи, иссиқда тетиклаштирувчи!</p>
+                        <button class="btn btn-primary ">Харид қилиш <input type="checkbox" class="product-checkbox1" data-price="10000"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <footer>
+        <div class="container-fluid">
+            <br>
+            <h2 class="text-center mt-5 mb-5">Доставка по всему Ташкенту!</h2>
+            <div class="row align-items-center">
+                <div class="col-12 col-sm-6">
+                    <div class="accordion p-3" id="deliveryAccordion">
+                        <div class="accordion-item card">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button card-header mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#mirzo">
+                                    Г. Ташкент, Мирзо-Улугбекский р-н
+                                </button>
+                            </h2>
+                            <div id="mirzo" class="accordion-collapse collapse" data-bs-parent="#deliveryAccordion">
+                                <div class="accordion-body contact-info">Информация о доставке...</div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item card">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button card-header" type="button" data-bs-toggle="collapse" data-bs-target="#shaykhantahur">
+                                    Г. Ташкент, Шайхантахурский р-н
+                                </button>
+                            </h2>
+                            <div id="shaykhantahur" class="accordion-collapse collapse show" data-bs-parent="#deliveryAccordion">
+                                <div class="accordion-body contact-info">
+                                    <p>📞 +998 (78) 777-20-20</p>
+                                    <p>📧 support@macbro.uz</p>
+                                    <p>📍 Г. Ташкент, Шайхантахурский р-н, ул. Алишера Навои 27</p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item card">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button card-header" type="button" data-bs-toggle="collapse" data-bs-target="#mirzo2">
+                                    Г. Ташкент, Мирзо-Улугбекский р-н
+                                </button>
+                            </h2>
+                            <div id="mirzo2" class="accordion-collapse collapse" data-bs-parent="#deliveryAccordion">
+                                <div class="accordion-body contact-info">Информация о доставке...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 mb-2 text-center">
+                    <img src="flipped_delivery.png" alt="Delivery Guy" class="img-fluid" style="max-width: 400px;">
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="modalBody"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+  
+</body>
+
+</html>

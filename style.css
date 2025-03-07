@@ -1,0 +1,166 @@
+.navbar-custom {
+    background-color: #1C786B;
+    padding: 10px 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-nav {
+    margin: auto;
+}
+
+.nav-link {
+    color: white;
+    margin: 0 15px;
+}
+
+.nav-link.active {
+    color: #FFD700;
+}
+
+.cart-button1 {
+    background-color:#3a978b;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 15px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card img {
+    max-height: 150px;
+    object-fit: contain;
+}
+.price {
+    color: #1C786B;
+    font-weight: bold;
+}
+.discount {
+    background-color: #FFD700;
+    color: black;
+    padding: 2px 8px;
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 5px;
+}  .card { cursor: pointer; }
+.btn-group {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.btn {
+    margin: 5px;
+}
+
+section .mycol img{
+    width: 300px;
+    height: 300px;
+    animation: aylan 15s linear infinite;
+    border-radius: 50%;
+    margin: auto;
+}
+@keyframes aylan{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+@media (max-width:600px){
+    section .mycol {
+        width: 100%;
+    }
+}
+
+
+footer {
+    background: linear-gradient(to right, #0d6f52 70%, #f1c40f 30%);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+.product-checkbox1 {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.cart-button1 {
+    background-color:#3a978b;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 15px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+#viewCounter, #resetCounter {
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#viewCounter {
+    background-color: #28a745;
+}
+
+
+.language-container {
+    position: relative;
+    display: inline-block;
+}
+
+.language-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.language-menu.show {
+    display: block;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.lang-btn:hover {
+    background: #f1f1f1;
+}
+
